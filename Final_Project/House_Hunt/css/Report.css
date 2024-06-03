@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --green: #27ae60;
+    --black: #333;
+    --white: #fff;
+    --bg-color: #eee;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --border: .1rem solid var(--black);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+body {
+    position: relative; /* Set body to relative positioning */
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.nav-buttons {
+    /* Position the navigation buttons */
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.btn {
+    /* Styling for all buttons */
+    display: block;
+    width: 14rem; /* Adjusted button width */
+    cursor: pointer;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    background: var(--green); /* Background color using CSS variable */
+    color: var(--white); /* Text color using CSS variable */
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    /* Hover effect for buttons */
+    background: var(--black); /* Change background color on hover */
+}
+
+.product-display {
+    margin: 30rem 0; /* Adjusted margin to move the section down */
+}
+
+.product-display .product-display-table {
+    width: 100%;
+    text-align: center;
+}
+
+.product-display .product-display-table thead {
+    background: var(--bg-color);
+}
+
+.product-display .product-display-table th {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.product-display .product-display-table td {
+    padding: 1rem;
+    font-size: 2rem;
+    border-bottom: var(--border);
+}
+
+.product-display .product-display-table .btn:first-child {
+    margin-top: 0;
+}
+
+.product-display .product-display-table .btn:last-child {
+    background: crimson;
+}
+
+.product-display .product-display-table .btn:last-child:hover {
+    background: var(--black);
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-display {
+        overflow-y: scroll;
+    }
+
+    .product-display .product-display-table {
+        width: 80rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%; 
+    }
+}
+
+.report-word {
+    font-size: 2rem; /* Adjust font size */
+    color: var(--green); /* Adjust font color */
+    font-weight: 500; /* Adjust font weight */
+    text-transform: uppercase; /* Optional: text transformation */
+    margin-bottom: 1rem; /* Adjust spacing below the word */
+}
+
+/* Add specific styles for .report if needed */
+.report {
+    margin: 2rem 0; /* Example margin for the .report section */
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text within the flex item */
+}
